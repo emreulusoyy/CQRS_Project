@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CQRS\Commands\**" />
+    <Content Remove="CQRS\Commands\**" />
+    <EmbeddedResource Remove="CQRS\Commands\**" />
+    <None Remove="CQRS\Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
@@ -16,11 +23,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="CQRS\Commands\ProductCommands\" />
-    <Folder Include="CQRS\Queries\ProductQueries\" />
   </ItemGroup>
 
 </Project>

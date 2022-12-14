@@ -14,5 +14,6 @@ namespace CQRS_İstanbulEğitimAkademi.DAL.Context
             optionsBuilder.UseSqlServer("Server=DESKTOP-0A6CNA1;initial catalog=DbCQRS; integrated security=true");
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

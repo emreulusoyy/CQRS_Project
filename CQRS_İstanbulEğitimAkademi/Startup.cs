@@ -1,4 +1,5 @@
 using CQRS_İstanbulEğitimAkademi.CQRS.Handlers.ProductHandlers;
+using CQRS_İstanbulEğitimAkademi.CQRS.Handlers.StudentHandlers;
 using CQRS_İstanbulEğitimAkademi.DAL.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,6 +30,10 @@ namespace CQRS_İstanbulEğitimAkademi
 
             services.AddScoped<GetProductQueryHandler>();
             services.AddScoped<GetProductQueryHandler2>();
+            services.AddScoped<StudentQueryHandler>();
+            services.AddScoped<CreateStudentCommandHandler>();
+            services.AddScoped<GetStudentByIDQueryHandler>();
+            services.AddScoped<RemoveStudentCommandHandler>();
             services.AddControllersWithViews();
         }
 
