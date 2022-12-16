@@ -8,6 +8,7 @@
 <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 <div class="container">
     <br />
+    <form method="post">
     <label>Öğrenci ID</label>
     <input type="text" asp-for="StudentID" class="form-control" />
     <br />
@@ -23,4 +24,6 @@
     <label>Öğrenci Ortalama</label>
     <input type="text" asp-for="LessonAverage" class="form-control" />
     <br />
+    <button class="btn btn-primary">Verileri Güncelle</button>
+</form>
 </div>

@@ -1,0 +1,26 @@
+﻿@model List<GetAllMemberResult>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+<table class="table table-bordered">
+<tr>
+<th>#</th>
+<th>Üye Adı</th>
+<th>Üye Soyadı</th>
+<th>Üye Şehri</th>
+</tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+    <td>@item.MemberID</td>
+    <td>@item.Name</td>
+    <td>@item.Surname</td>
+    <td>@item.City</td>
+    </tr>
+        }
+</table>
+<a href="/Member/AddMember/" class="btn btn-outline-primary">Yeni Üye Girişi</a>
+</div>

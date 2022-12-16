@@ -15,5 +15,6 @@ namespace CQRS_İstanbulEğitimAkademi.DAL.Context
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Member> Members { get; set; }
     }
 }

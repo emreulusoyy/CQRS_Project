@@ -1,6 +1,7 @@
 using CQRS_İstanbulEğitimAkademi.CQRS.Handlers.ProductHandlers;
 using CQRS_İstanbulEğitimAkademi.CQRS.Handlers.StudentHandlers;
 using CQRS_İstanbulEğitimAkademi.DAL.Context;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +35,9 @@ namespace CQRS_İstanbulEğitimAkademi
             services.AddScoped<CreateStudentCommandHandler>();
             services.AddScoped<GetStudentByIDQueryHandler>();
             services.AddScoped<RemoveStudentCommandHandler>();
+            services.AddScoped<UpdateStudentCommandHandler>();
+
+            services.AddMediatR(typeof(Startup));
             services.AddControllersWithViews();
         }
 
